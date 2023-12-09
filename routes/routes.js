@@ -4,5 +4,4 @@ const routes = Router();
 import views from "./viewsRoutes.js";
 routes.use(views);
 
-
 export { routes };

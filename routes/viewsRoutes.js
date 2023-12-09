@@ -1,11 +1,8 @@
 import { Router } from "express";
-const views = Router()
+const views = Router();
 
 views.get("/", (req, res) => {
   res.render("home");
 });
 
-
-
-
-export default views
+export default views;
