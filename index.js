@@ -4,7 +4,7 @@ import path from "path"
 import moment from "moment"
 
 const app = express()
-
+import { routes } from "./routes/routes.js";
 
 app.use(
   express.urlencoded({
@@ -32,7 +32,7 @@ app.set("views", "./views");
 app.use(express.static (path.join(path.resolve(),"public")));
 app.locals.publicPath="/public"
 
-
+app.use(routes);
 
 app.listen(3001, () => {
     console.log(" 🚀 Rodando no localhost:3001 🚀 ");
