@@ -1,5 +1,6 @@
 import bcrypt from "bcrypt";
-import { sequelize, DataTypes } from "../database/db.js";
+import { DataTypes } from "sequelize";
+import { sequelize } from "../database/db.js";
 
 export const Usuario = sequelize.define("usuarios", {
   nomeCompleto: {
@@ -33,4 +34,4 @@ Usuario.prototype.verificarSenha = function (senha) {
 };
 
 // Usuario.drop();
-Usuario.sync({ force: true });
+// Usuario.sync({ force: true });
