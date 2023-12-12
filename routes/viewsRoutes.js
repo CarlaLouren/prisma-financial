@@ -8,12 +8,19 @@ views.get("/", (req, res) => {
 views.get("/sobrenos", (req, res) => {
   res.render("sobrenos");
 });
+
 views.get("/contato", (req, res) => {
   res.render("contato");
 });
+
+views.get("/relatorio", (req, res) => {
+  res.render("relatorio");
+});
+
 views.get("/cadastro", (req, res) => {
   res.render("cadastro");
 });
+
 views.get("/login", (req, res) => {
   res.render("login");
 });
