@@ -23,6 +23,44 @@
   overflow: hidden;
 }
 
+.nav-menu {
+  display: flex !important;
+  width: 100% !important;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  padding: 2em 8% !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  z-index: 1000 !important;
+}
+
+.nav-menu .logo {
+  width: 80px !important;
+}
+
+.navbar-collapse ul li {
+  list-style: none !important;
+  display: inline-block !important;
+  margin-left: 1.5em !important;
+}
+
+.navbar-collapse ul li a {
+  text-decoration: none !important;
+  color: #fff !important;
+  font-size: 1.2em !important;
+  padding: 1em !important;
+}
+
+.navbar-collapse ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+}
+
+.navbar-collapse {
+  justify-content: flex-end !important;
+}
+
 .content2 h1 {
   text-align: center;
   font-size: 10vw;
