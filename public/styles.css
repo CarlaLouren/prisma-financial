@@ -17,14 +17,13 @@ body {
 .container-home {
   width: 100%;
   /* background-image: linear-gradient(rgba(8, 105, 216, 0.3), rgba(3, 16, 51, 0.3)); */
-
+  height: 100%;
   /* color:#fff; */
   position: relative;
   padding: 0.5rem 5%;
   display: flex;
   align-items: center;
   flex-direction: column;
-  overflow: hidden;
 }
 
 .nav-menu {
@@ -62,6 +61,9 @@ body {
 
 .navbar-collapse {
   justify-content: flex-end !important;
+}
+.content2 {
+  height: 100vh !important;
 }
 
 .content2 h1 {

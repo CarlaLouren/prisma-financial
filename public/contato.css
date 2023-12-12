@@ -1,0 +1,45 @@
+.contato-container {
+  display: flex;
+  max-width: 300px !important;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffff;
+  padding: 30px;
+  margin: 15px;
+  border-radius: 8px;
+}
+
+input {
+  border-radius: 5px;
+  outline: none;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  height: 30px;
+}
+
+input:focus,
+input:valid {
+  border-color: #9b59b6;
+}
+
+#btn-color {
+  padding: 10px 15px;
+  background-color: #9b59b6;
+  border-color: #9b59b6;
+}
+
+.btn-contato {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+textarea {
+  border-radius: 4px;
+  font-size: 16px;
+  resize: none;
+  border: solid 1px #9b59b6 !important;
+  height: 150px;
+}
