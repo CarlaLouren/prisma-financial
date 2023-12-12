@@ -8,5 +8,8 @@ views.get("/", (req, res) => {
 views.get("/sobrenos", (req, res) => {
   res.render("sobrenos");
 });
+views.get("/contato", (req, res) => {
+  res.render("contato");
+});
 
 export default views;
