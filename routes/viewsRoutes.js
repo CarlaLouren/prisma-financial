@@ -11,5 +11,8 @@ views.get("/sobrenos", (req, res) => {
 views.get("/contato", (req, res) => {
   res.render("contato");
 });
+views.get("/cadastro", (req, res) => {
+  res.render("cadastro");
+});
 
 export default views;
