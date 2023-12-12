@@ -14,5 +14,8 @@ views.get("/contato", (req, res) => {
 views.get("/cadastro", (req, res) => {
   res.render("cadastro");
 });
+views.get("/login", (req, res) => {
+  res.render("login");
+});
 
 export default views;
