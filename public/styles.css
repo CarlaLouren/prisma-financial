@@ -20,13 +20,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   overflow: hidden;
+  padding: 1rem;
+  gap: 3rem;
 }
 
 .nav-menu {
   display: flex !important;
   width: 100% !important;
-  position: fixed !important;
   top: 0 !important;
   left: 0 !important;
   padding: 2em 8% !important;

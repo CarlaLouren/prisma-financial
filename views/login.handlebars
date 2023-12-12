@@ -1,3 +1,45 @@
-<div>
-  login
+<div class="container container-cadastro mt-4">
+
+  <div class="imagem-cadastro">
+    <img src="{{../publicPath}}/img/login.png" alt="" />
+  </div>
+
+  <div class="form mt-4">
+
+    <form action="/usuario/login" method="POST">
+      <div class="form-header">
+        <div class="title">
+          <h1>Login</h1>
+        </div>
+      </div>
+
+      <div class="input-group">
+
+        <div class="input-box">
+          <label class="form-label" for="email">Email</label>
+          <input class="form-control" id="email" type="text" name="email" placeholder="digite seu email" required />
+          {{#if erro}}
+          <span class="text-danger">{{erro}}</span>
+          {{/if}}
+        </div>
+
+        <div class="input-box">
+          <label class="form-label" for="senha">Senha</label>
+          <input class="form-control" id="senha" type="password" name="password" placeholder="digite sua senha"
+            required />
+        </div>
+
+      </div>
+
+      <div class="container-button">
+        <button class="btn" type="submit">Entrar</button>
+      </div>
+
+
+    </form>
+    <div class="container-button mt-4">
+      <a href="/cadastro" class="text-reset text-decoration-none text-primary fw-bold">Click aqui para cadastrar</a>
+    </div>
+
+  </div>
 </div>
