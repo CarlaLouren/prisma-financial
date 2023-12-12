@@ -1,7 +1,7 @@
 import { Usuario } from "../models/Usuario.js";
 
 class UsuarioController {
-  async login() {
+  async login(req, res) {
     try {
       const { email, password } = req.body;
 
