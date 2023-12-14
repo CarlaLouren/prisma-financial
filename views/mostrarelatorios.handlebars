@@ -1,0 +1,56 @@
+<div class="container bg-white">
+  <iframe id="my_iframe" style="display:none;"></iframe>
+  <div class="head-relatorio">
+    <h1>Relatórios</h1>
+    <div>
+      <a href="/exportar">
+        <button class="btn btn-success">Exportar relatório</button>
+      </a>
+      <a href="/relatorio">
+        <button class="btn btn-primary">Voltar</button>
+      </a>
+    </div>
+
+  </div>
+  <table id="reportTable" class="table table-responsive">
+    <thead class="table">
+      <tr>
+        <th>Data</th>
+        <th>Filtrar Processo</th>
+        <th>Número do Processo</th>
+        <th>Tipo de Exportação</th>
+        <th>Tipo de Processo</th>
+        <th>Especialidade</th>
+        <th>Opções</th>
+      </tr>
+    </thead>
+    <tbody id="table-body">
+      {{#each relatorios}}
+        <tr>
+          <td>{{this.data}}</td>
+          <td>{{this.filtrarProcesso}}</td>
+          <td>{{this.numeroProcesso}}</td>
+          <td>{{this.tipoExportacao}}</td>
+          <td>{{this.tipoProcesso}}</td>
+          <td>{{this.especialidade}}</td>
+          <td>
+            <a
+              href="/relatorio/editar/{{this.id}}"
+              class="btn btn-primary"
+            >Editar</a>
+            <form
+              action="/relatorio/deletar"
+              method="POST"
+              class="d-inline-block"
+            >
+              <input type="hidden" name="id" value="{{this.id}}" />
+              <button type="submit" class="btn btn-danger">Deletar</button>
+            </form>
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+  <ul id="pagination"></ul>
+  <div id="table-page"></div>
+</div>

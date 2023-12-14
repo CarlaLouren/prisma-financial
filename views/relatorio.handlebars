@@ -1,1 +1,129 @@
-<div>relatorio</div>
+<div class="container formulario-container">
+  <div class="row">
+    <h1 id="titulo">Faturamento Financeiro</h1>
+  </div>
+  <form action="/relatorio/cadastrar" method="POST">
+
+    <div class="row">
+      <div class="col-auto">
+        <label class="label-input form-label" for="data">Data</label>
+      </div>
+      <div class="col-auto">
+        <input
+          class="label-input form-control"
+          type="date"
+          name="data"
+          id="data"
+          required
+        />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-auto">
+        <label
+          class="label-input form-label"
+          for="numeroProcesso"
+        >Processos</label>
+      </div>
+      <div class="col-auto">
+        <input
+          class="label-input form-control"
+          type="text"
+          name="numeroProcesso"
+          id="numeroProcesso"
+          required
+        />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-auto">
+        <label class="label-input form-label" for="filtrarProcesso">Filtar Nº de
+          Processo</label>
+      </div>
+      <div class="col-auto">
+        <input
+          class="label-input form-control"
+          type="text"
+          name="filtrarProcesso"
+          id="filtrarProcesso"
+          required
+        />
+      </div>
+    </div>
+
+    <div class="mt-4">
+      <label class="">Tipo de Processo</label>
+      <div class="form-check">
+        <label class="form-check-label">sistema de contas a receber</label>
+        <input
+          class="form-check-input"
+          type="radio"
+          name="tipoProcesso"
+          value="contas a receber"
+          required
+        />
+      </div>
+      <div class="form-check">
+        <label class="form-check-label">sistema de contas a pagar</label>
+        <input
+          class="form-check-input"
+          type="radio"
+          name="tipoProcesso"
+          value="contas a pagar"
+          disabled
+        />
+      </div>
+    </div>
+    <br />
+    <div clas="row">
+      <label class="form-label" for="especialidade">Especialidade</label>
+      <select
+        class="form-select"
+        id="especialidade"
+        name="especialidade"
+        required
+      >
+        <option value="" selected disabled hidden>Selecione uma especialidade</option>
+        <option value="diretor">Diretor</option>
+        <option value="analista financeiro">Analista financeiro</option>
+      </select>
+    </div>
+    <br />
+
+    <div clas="row">
+      <label class="form-label">Exportação</label>
+      <select
+        class="form-select"
+        id="tipoExportacao"
+        name="tipoExportacao"
+        aria-label="pdf"
+        required
+      >
+        <option value="" selected disabled hidden>Selecione uma opção de
+          exportação</option>
+        <option value="pdf" selected>PDF</option>
+        {{! <option value="word">word</option>
+        <option value="powerpoint">powerpoint</option> }}
+      </select>
+    </div>
+
+    <div class="btn-relatorio">
+      <button class="btn" id="btn-color" type="submit">Enviar relatório</button>
+    </div>
+    <div class="mt-4 text-center text-success">
+      {{#if sucesso}}
+        <span>{{sucesso}}</span>
+      {{/if}}
+      {{#if erro}}
+        <span>{{erro}}</span>
+      {{/if}}
+    </div>
+  </form>
+
+  <div class="container-btn">
+    <a href="/relatorios">
+      <buttton class="btn btn-primary">Lista de Relatórios</buttton>
+    </a>
+  </div>
+</div>
