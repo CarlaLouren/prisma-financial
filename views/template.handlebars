@@ -1,0 +1,30 @@
+<style>
+  .report{ margin-top: 20px; padding: 20px; }
+</style>
+
+<div class="report">
+  <table id="reportTable" class="table table-responsive">
+    <thead class="table">
+      <tr>
+        <th>Data</th>
+        <th>Filtrar Processo</th>
+        <th>Número do Processo</th>
+        <th>Tipo de Exportação</th>
+        <th>Tipo de Processo</th>
+        <th>Especialidade</th>
+      </tr>
+    </thead>
+    <tbody id="table-body">
+      {{#each relatorios}}
+        <tr>
+          <td>{{this.data}}</td>
+          <td>{{this.filtrarProcesso}}</td>
+          <td>{{this.numeroProcesso}}</td>
+          <td>{{this.tipoExportacao}}</td>
+          <td>{{this.tipoProcesso}}</td>
+          <td>{{this.especialidade}}</td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>

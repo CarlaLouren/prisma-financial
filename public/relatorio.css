@@ -1,7 +1,9 @@
 * {
   border: none;
 }
-
+.extend {
+  height: 100vh;
+}
 .formulario-container {
   display: flex;
   max-width: 550px !important;

@@ -1,0 +1,64 @@
+<div class="container formulario-container">
+  <div class="row ">
+    <h1 class="text-center" id="titulo ">Editar Faturamento</h1>
+  </div>
+  <form action="/relatorio/atualizar" method="POST">
+    <input type="hidden" name="id" value="{{relatorio.id}}">
+    <div class="row">
+      <div class="col-auto">
+        <label class="label-input form-label" for="data">Data</label>
+      </div>
+      <div class="col-auto">
+        <input class="label-input form-control" type="date" name="data" id="data" value="{{relatorio.data}}"
+          required />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-auto">
+        <label class="label-input form-label" for="numeroProcesso">Processos</label>
+      </div>
+      <div class="col-auto">
+        <input class="label-input form-control" type="text" name="numeroProcesso" id="numeroProcesso"
+          value="{{relatorio.numeroProcesso}}" required />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-auto">
+        <label class="label-input form-label" for="filtrarProcesso">Filtar Nº de
+          Processo</label>
+      </div>
+      <div class="col-auto">
+        <input class="label-input form-control" type="text" name="filtrarProcesso" id="filtrarProcesso"
+          value="{{relatorio.filtrarProcesso}}" required />
+      </div>
+    </div>
+    <br />
+    <div class="row">
+      <label class="form-label" for="especialidade">Especialidade</label>
+      <select class="form-select" id="especialidade" name="especialidade" required>
+        <option value="" selected disabled hidden>Selecione uma especialidade</option>
+        <option value="diretor" {{#if (eq relatorio.especialidade "diretor" )}}selected{{/if}}>Diretor</option>
+        <option value="analista financeiro" {{#if (eq relatorio.especialidade "analista financeiro" )}}selected{{/if}}>
+          Analista financeiro</option>
+      </select>
+    </div>
+    <br />
+
+    <div class="row">
+      <label class="form-label">Exportação</label>
+      <select class="form-select" id="tipoExportacao" name="tipoExportacao"
+        aria-label="Selecione uma opção de exportação" required>
+        <option value="" selected disabled hidden> Selecione uma opção de exportação</option>
+        <option value="pdf" {{#if (eq relatorio.tipoExportacao "pdf" )}}selected{{/if}}>PDF</option>
+        {{!-- <option value="word" {{#if (eq relatorio.tipoExportacao "word" )}}selected{{/if}}>word</option>
+        <option value="powerpoint" {{#if (eq relatorio.tipoExportacao "powerpoint" )}}selected{{/if}}>powerpoint --}}
+        </option>
+      </select>
+    </div>
+
+    <div class="btn-relatorio">
+      <button class="btn" id="btn-color" type="submit">Enviar relatório</button>
+    </div>
+  </form>
+</div>
